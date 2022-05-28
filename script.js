@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$("#tax").text("$" + tax.toFixed(2));
 	$("#add-price").click(function(){
 		let totalPrice =+ getPrice +tax
-		$('#price-list').append("<li>" + totalPrice + "<li>")
+		$('#price-list').html("<li>" + totalPrice + "<li>")
 		console.log("Get Price = ", getPrice ,"Total price" , totalPrice)
 	})
  });
