@@ -16,7 +16,7 @@ $(document).ready(function() {
 	$("#add-price").click(function(){
 		let ul = $("#price-list")
 	if(getPrice > 0){
-		$(ul).append("<li>" + totalPrice + "<li>").show();
+		$(ul).html("<li>" + totalPrice + "<li>").show();
 	}
  console.log("Get Price = ", getPrice ,"Total price" , totalPrice)
 })
