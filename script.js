@@ -10,11 +10,16 @@ $(document).ready(function() {
 
 		
 	$("#tax").text("$" + tax.toFixed(2));
+	let totalPrice =+ getPrice +tax
+	
+	
 	$("#add-price").click(function(){
-		let totalPrice =+ getPrice +tax
-		$('#price-list').html("<li>" + totalPrice + "<li>")
-		console.log("Get Price = ", getPrice ,"Total price" , totalPrice)
-	})
- });
+		let ul = $("#price-list")
+	if(getPrice > 0){
+		$(ul).append("<li>" + totalPrice + "<li>").show();
+	}
+ console.log("Get Price = ", getPrice ,"Total price" , totalPrice)
+})
+});
 
 });
