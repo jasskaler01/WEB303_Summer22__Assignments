@@ -2,8 +2,12 @@
 //Jaskaran Singh
 
 $(function(){
+    $("#content-wrapper").on('click',function(){
+$("#content").slideToggle("slow")
+    })
     $("#prospect").on('click',function(){
         openProspect();
+       
     });
     $("#convert").on('click',function(){
         openConvert();
@@ -45,10 +49,12 @@ function openProspect() {
        let el = document.getElementById("content");
       // el.style.display = "block";
        el.innerHTML = xhr.responseText;
+      
      }
    };
  
    xhr.send();
    
  }
+ 
 });
