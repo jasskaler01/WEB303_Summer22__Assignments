@@ -48,7 +48,7 @@ nav ul li a:hover {
 	padding-right: 15px;
 }
 #content {
-	display: none;
+	display: block;
 }
 h3 {
 	font-size: 100%;

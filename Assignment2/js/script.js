@@ -17,7 +17,7 @@ function openProspect() {
      xhr.onload = function () {
       if (xhr.status === 200) {
         let el = document.getElementById("content");
-        el.style.display = "block";
+      //  el.style.display = "block";
         el.innerHTML = xhr.responseText;
       }
     };
@@ -25,4 +25,30 @@ function openProspect() {
     xhr.send();
     
   }
+  function openConvert() {
+    xhr.open("GET", "convert.html");
+    xhr.onload = function () {
+     if (xhr.status === 200) {
+       let el = document.getElementById("content");
+     //  el.style.display = "block";
+       el.innerHTML = xhr.responseText;
+     }
+   };
+ 
+   xhr.send();
+   
+ }
+ function openRetain() {
+    xhr.open("GET", "retain.html");
+    xhr.onload = function () {
+     if (xhr.status === 200) {
+       let el = document.getElementById("content");
+      // el.style.display = "block";
+       el.innerHTML = xhr.responseText;
+     }
+   };
+ 
+   xhr.send();
+   
+ }
 });
