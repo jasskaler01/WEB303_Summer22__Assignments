@@ -24,12 +24,12 @@ $.ajax({
 
     },
     success:function(data){
-        $('div#glitch-team').empty().toggle;
+        $('div#glitch-team').empty();
         $.each(data.members,function(key,val){
             console.log("data Key",key,"And data val:",val)
             $('div#glitch-team').append(`<h4>${val.fullname}</h5
             <h6>${val.position}</h6>
-            <p>${val.shortbio}</p>`).show(3000)
+            <p>${val.shortbio}</p>`)
                 })
        
     }
