@@ -29,7 +29,7 @@ $.ajax({
             console.log("data Key",key,"And data val:",val)
             $('div#glitch-team').append(`<h4>${val.fullname}</h5
             <h6>${val.position}</h6>
-            <p>${val.shortbio}</p>`)
+            <p>${val.shortbio}</p>`).show(3000)
                 })
        
     }
