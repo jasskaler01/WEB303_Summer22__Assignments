@@ -21,3 +21,21 @@ dob:2004-02-19},
     age:19,
 dob:2022-09-08},
 ]
+
+var results = [];
+characters.forEach(function(character) {
+if (character.age) {
+results.push(character); // Add to array
+}
+});
+var $tableBody = $('<tbody></tbody>');
+for (var i = 0; i < results.length; i++) {
+var character = results[i]; // Store current charcater
+var $row = $('<tr></tr>'); // Create row for them
+$row.append($('<td></td>').text(character.name)); // Add name
+$row.append($('<td></td>').text(character.description)); // Add desvription
+$row.append($('<td></td>').text(character.age));
+$row.append($('<td></td>').text(character.dob));
+$tableBody.append( $row );
+}
+$('thead').after($tableBody); 
