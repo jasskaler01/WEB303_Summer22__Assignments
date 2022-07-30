@@ -4,31 +4,31 @@ var characters = [
         name: 'Winona Ryder',
         description: 'Joyce Byers,Joyce is a very caring and strong-willed woman who works as a retail clerk at Melvald General Store in downtown Hawkins. ',
         age: 50,
-        dob: 1971 - 10 - 29
+        dob: "1971 - 10 - 29"
     },
     {
         name: 'David Harbour',
         description: 'Jim Hooper ,  Hopper has lived in Hawkins nearly all his life, having attended high school with Joyce and Bob',
         age: 45,
-        dob: 1976 - 05 - 18
+        dob: "1976 - 05 - 18"
     },
     {
         name: 'Finn wolfhard',
         description: 'Mike Wheeler,Mike is an intelligent and conscientious student who is committed to Lucas, Dustin and Will. ,',
         age: 19,
-        dob: 2002 - 12 - 23
+        dob: "2002 - 12 - 23"
     },
     {
         name: 'Millie Bobby Brown',
         description: ' Eleven,She is a telekinetic girl who is the sole match for the creatures of the Upside Down and Hopper adoptive daughter.',
         age: 18,
-        dob: 2004 - 02 - 19
+        dob: "2004 - 02 - 19"
     },
     {
         name: 'Gaten Matarazzo',
         description: 'His Character name is Dustin Henderson, Dustin is  the Bard and has arguably the most extensive knowledge of the game, particularly the monsters.',
         age: 19,
-        dob: 2022 - 09 - 08
+        dob: "2022 - 09 - 08"
     },
 ]
 
