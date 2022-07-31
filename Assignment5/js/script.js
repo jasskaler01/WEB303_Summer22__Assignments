@@ -31,29 +31,27 @@ var characters = [
         dob: "2022 - 09 - 08"
     },
 ]
-
-var results = [];
-characters.forEach(function (character) {
-    if (character.age) {
-        results.push(character); // Add to array
-    }
-});
-var $tableBody = $('<tbody></tbody>');
-for (var i = 0; i < results.length; i++) {
-    var character = results[i]; // Store current charcater
-    var $row = $('<tr></tr>'); // Create row for them
-    $row.append($('<td></td>').text(character.name)); // Add name
-    $row.append($('<td></td>').text(character.description)); // Add desvription
-    $row.append($('<td></td>').text(character.age));
-    $row.append($('<td></td>').text(character.dob));
-    $tableBody.append($row);
-}
-$('thead').after($tableBody);
-
-
-
+var names = $('#name')
     var $search = $('#search'); // Get input
-    var cache = []; // Create array
+    var cache = [];
+    var $tableBody=$('tbody')
+$.each(characters, function(key,val) { 
+
+    // Store current charcater
+    var $row = $('<tr></tr>'); // Create row for them
+    $row.append($('<td></td>').text(val.name)); // Add name
+    $row.append($('<td></td>').text(val.description)); // Add desvription
+    $row.append($('<td></td>').text(val.age));
+    $row.append($('<td></td>').text(val.dob));
+    $tableBody.append($row);
+
+ // Create array
+   // Each img
+        cache.push({ // Add to cache
+            element: $row, // This image
+            name: val.name.trim().toLowerCase() // Its alt text
+        });
+    });
 function filter() {
         var query = this.value.trim().toLowerCase(); // Get query
         if (query) { // If there’s a query
@@ -70,16 +68,14 @@ function filter() {
             $('tbody tr').removeClass("active");
         }
     }
-  
+    // if the search input box supports the input event, we want to use it instead of the keyup event
     if ('oninput' in $search[0]) {
         // Use input event to call filter()
         $search.on('input', filter);
     } else { // Otherwise
         // Use keyup event to call filter()
         $search.on('keyup', filter);
-    
-    }
-//Sorting
+    }//Sorting
 var compare = { // Declare object
     name: function(a, b) { // Add name() method
         a = a.replace(/^the /i, ''); // Remove The
